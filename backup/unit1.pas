@@ -13,12 +13,14 @@ type
 
   TForm1 = class(TForm)
     Button1: TButton;
+    findText: TButton;
     FindDialog1: TFindDialog;
     OpenDialog1: TOpenDialog;
     openFile: TButton;
     Memo1: TMemo;
     SaveDialog1: TSaveDialog;
     procedure Button1Click(Sender: TObject);
+    procedure findTextClick(Sender: TObject);
     procedure openFileClick(Sender: TObject);
   private
 
@@ -71,6 +73,11 @@ begin
       begin
       Memo1.lines.SaveToFile(SaveDialog1.FileName+'.txt');
       end;
+end;
+
+procedure TForm1.findTextClick(Sender: TObject);
+begin
+
 end;
 
 end.

@@ -28,7 +28,7 @@ object Form1: TForm1
     Height = 25
     Top = 8
     Width = 75
-    Caption = 'save file'
+    Caption = 'save as ..'
     OnClick = Button1Click
     TabOrder = 2
   end

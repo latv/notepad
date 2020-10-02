@@ -20,6 +20,7 @@ type
     Memo1: TMemo;
     SaveDialog1: TSaveDialog;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure findTextClick(Sender: TObject);
     procedure openFileClick(Sender: TObject);
   private
@@ -55,12 +56,11 @@ begin
     Memo1.Lines.Clear;                              //delete all lines of Memo1
     // Keep reading lines until the end of the file is reached
     while not eof(tfIn) do
-    begin
-      readln(tfIn, s);
-
+      begin
+        readln(tfIn, s);
         Memo1.Lines.Add(s);
 
-    end;
+      end;
 
     // Done so close the file
     CloseFile(tfIn);
@@ -71,9 +71,26 @@ procedure TForm1.Button1Click(Sender: TObject);
 begin
         If SaveDialog1.Execute then
       begin
-      Memo1.lines.SaveToFile(SaveDialog1.FileName+'.txt');
+      Memo1.lines.SaveToFile(SaveDialog1.FileName);
       end;
 end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+if filename='' then
+
+
+  If SaveDialog1.Execute then
+        Memo1.lines.SaveToFile(SaveDialog1.FileName);
+
+
+
+else if
+Memo1.lines.SaveToFile(filename);
+
+end;
+
+
 
 procedure TForm1.findTextClick(Sender: TObject);
 begin
